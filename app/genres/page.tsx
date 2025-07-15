@@ -1,12 +1,10 @@
 import React from 'react'
-import data from '../../data.json';
-import Navbar from '../../components/Navbar';
+import data from '@/public/data.json';
 
 const page = () => {
   const genres = data.genres;
   return (
     <>
-      <Navbar />
       <div className="movie-grid-container">
         {genres.map((genre) => (
           <div className="movie-card-grid" key={genre.id}>

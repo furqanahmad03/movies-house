@@ -1,42 +1,19 @@
+"use client";
+
 import React from 'react'
-import data from "../../../data.json";
+import data from "@/public/data.json";
 import Link from "next/link";
-import Navbar from '@/components/Navbar';
+import { useParams } from 'next/navigation';
 
-type Movie = {
-  id: string;
-  title: string;
-  description: string;
-  releaseYear: number;
-  rating: number;
-  directorId: string;
-  genreId: string;
-};
 
-type Director = {
-  id: string;
-  name: string;
-  biography: string;
-};
-
-type Genre = {
-  id: string;
-  name: string;
-};
-
-type Params = {
-  params: {
-    id: string;
-  };
-};
-
-const page = ({ params }: Params) => {
+const Page = () => {
+  // const { id } = await params;
+  const params = useParams();
   const director = data.directors.find((d) => d.id === params.id);
 
   if (!director) {
     return (
       <>
-        <Navbar />
         <div>Director not found</div>
       </>
     )
@@ -44,11 +21,9 @@ const page = ({ params }: Params) => {
 
   return (
     <>
-      <Navbar />
-
       <div style={{ padding: "24px", maxWidth: "800px", margin: "0 auto" }}>
-        <Link href="/" style={{ display: "inline-block", marginBottom: "16px", color: "black" }}>
-          ← Back
+        <Link href="/directors" style={{ display: "inline-block", marginBottom: "16px", color: "black" }}>
+          ← Back to Directors
         </Link>
         <h1 style={{ fontSize: "2rem", marginBottom: "12px" }}>
           {director.name}
@@ -59,4 +34,4 @@ const page = ({ params }: Params) => {
   )
 }
 
-export default page;
+export default Page;

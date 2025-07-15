@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 type Movie = {
   id: string;
@@ -31,7 +31,6 @@ type Props = {
 };
 
 const MovieGrid = ({ movies, genres, directors }: Props) => {
-  const [type, setType] = useState<"Movies" | "Gneres" | "Directors">("Movies");
 
   const getDirectorName = (id: string) =>
     directors.find((d) => d.id === id)?.name ?? "Unknown";
