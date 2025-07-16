@@ -1,8 +1,8 @@
 "use client";
 
-import Contact from '@/components/Contact';
-import Faqs from '@/components/Faqs';
-import Privacy from '@/components/Privacy';
+import Contact from '../../../components/Contact';
+import Faqs from '../../../components/Faqs';
+import Privacy from '../../../components/Privacy';
 import { notFound, useParams } from 'next/navigation';
 import React from 'react';
 

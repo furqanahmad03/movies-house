@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import MovieGrid from '@/components/MovieGrid';
+import MovieGrid from './MovieGrid';
 
 type Movie = {
-  id: string;
+  _id: string;
   title: string;
   description: string;
   releaseYear: number;
@@ -13,12 +13,12 @@ type Movie = {
 };
 
 type Genre = {
-  id: string;
+  _id: string;
   name: string;
 };
 
 type Director = {
-  id: string;
+  _id: string;
   name: string;
   biography: string;
 };
@@ -87,7 +87,7 @@ const MovieFilter = ({ initialMovies, genres, directors }: Props) => {
         >
           <option value="">All Genres</option>
           {genres.map((g) => (
-            <option key={g.id} value={g.id}>{g.name}</option>
+            <option key={g._id} value={g._id}>{g.name}</option>
           ))}
         </select>
 
