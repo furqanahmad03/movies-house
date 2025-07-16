@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '../../../components/ui/card';
 
 type Director = {
   _id: string;
@@ -112,4 +112,4 @@ export default async function Page({ params }: PageProps) {
   );
 }
 
-export const dynamicParams = false;
+export const dynamicParams = false; 

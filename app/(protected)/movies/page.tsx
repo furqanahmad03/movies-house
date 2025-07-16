@@ -1,4 +1,4 @@
-import MovieFilter from '../../components/MovieFilter';
+import MovieFilter from '../../../components/MovieFilter';
 
 export const revalidate = 5;
 
@@ -35,4 +35,4 @@ export default async function Page() {
       />
     </>
   );
-}
+} 

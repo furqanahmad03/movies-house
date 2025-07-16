@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '../../components/ui/card';
 import { BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
@@ -78,4 +78,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Page; 
